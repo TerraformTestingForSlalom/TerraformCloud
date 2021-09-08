@@ -1,4 +1,4 @@
 variable "myvaraible" {
 	type = string
-	default ="Welcome to Terraform Cloud"
+	default = "Welcome to Terraform Cloud"
 }
