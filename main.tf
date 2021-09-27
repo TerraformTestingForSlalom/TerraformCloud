@@ -19,7 +19,7 @@ module "basiccompute" {
 	virtual_machine_data_disk_type = "Preminum_LRS"
 	virtual_machine_deployment_group = 1
 	virtual_machine_enable_accelerated_network = true
-	virtual_machine_extension_storage_account = var.virtual_machijne_extension_storage_account 
+	//virtual_machine_extension_storage_account = var.virtual_machijne_extension_storage_account 
 	vistual_machine_name_prefix = "az"
 	virtual_machine_size = "Standard_D2_v3"
 	
