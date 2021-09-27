@@ -11,6 +11,10 @@ provider "azurerm" {
 resource "azurerm_resource_group" "clouddev_rg" {
 	name = var.RGName
 	location = var.location
+	
+	tags = {
+	    Name = "Loganayaki Kuppusamy"
+	}
 }
 
 
