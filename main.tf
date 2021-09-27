@@ -13,7 +13,10 @@ resource "azurerm_resource_group" "clouddev_rg" {
 	location = var.location
 	
 	tags = {
-	    Name = "Loganayaki Kuppusamy"
+		Name = "Loganayaki Kuppusamy"
+		Manager = "Justin Robins"
+		Project = "Home Depot - Sakura"
+		Market = "Atlanta"
 	}
 }
 
