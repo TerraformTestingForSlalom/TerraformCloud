@@ -23,6 +23,12 @@ resource "azurerm_resource_group" "clouddev_rg" {
 resource "azurerm_resource_group" "rg" {
   name     = var.resource_group_name
   location = var.location
+	tags = {
+		Name = "Loganayaki Kuppusamy"
+		Manager = "Justin Robins"
+		Project = "Home Depot - Sakura"
+		Market = "Atlanta"
+	}
 }
 
 resource "azurerm_kubernetes_cluster" "aks" {
@@ -50,6 +56,13 @@ resource "azurerm_kubernetes_cluster" "aks" {
     load_balancer_sku = "Standard"
     network_plugin    = "kubenet" # CNI
   }
+	
+	tags = {
+		Name = "Loganayaki Kuppusamy"
+		Manager = "Justin Robins"
+		Project = "Home Depot - Sakura"
+		Market = "Atlanta"
+	}
 }
 
 
