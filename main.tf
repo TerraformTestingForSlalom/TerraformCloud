@@ -66,7 +66,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
 }
 
 resource "azurerm_container_registry" "acr" {
-  name                = "containerRegistry_devOps_testing"
+  name                = "ContainerRegistryDevOpsTesting"
   resource_group_name = azurerm_resource_group.rg.name
   location            = var.location
   sku                 = "Premium"
