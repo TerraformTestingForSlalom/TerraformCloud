@@ -31,6 +31,21 @@ resource "azurerm_resource_group" "rg" {
 	}
 }
 
+resource "azurerm_container_registry" "acr" {
+  name                = "ContainerRegistryDevOpsTesting"
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = var.location
+  sku                 = "Premium"
+  admin_enabled       = false
+	
+	tags = {
+		Name = "Loganayaki Kuppusamy"
+		Manager = "Justin Robins"
+		Project = "Home Depot - Sakura"
+		Market = "Atlanta"
+	}
+}
+
 resource "azurerm_kubernetes_cluster" "aks" {
   name                = var.cluster_name
   kubernetes_version  = var.kubernetes_version
@@ -56,21 +71,6 @@ resource "azurerm_kubernetes_cluster" "aks" {
     load_balancer_sku = "Standard"
     network_plugin    = "kubenet"
   }
-	
-	tags = {
-		Name = "Loganayaki Kuppusamy"
-		Manager = "Justin Robins"
-		Project = "Home Depot - Sakura"
-		Market = "Atlanta"
-	}
-}
-
-resource "azurerm_container_registry" "acr" {
-  name                = "ContainerRegistryDevOpsTesting"
-  resource_group_name = azurerm_resource_group.rg.name
-  location            = var.location
-  sku                 = "Premium"
-  admin_enabled       = false
 	
 	tags = {
 		Name = "Loganayaki Kuppusamy"
