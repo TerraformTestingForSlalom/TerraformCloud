@@ -38,6 +38,8 @@ resource "azurerm_kubernetes_cluster" "aks" {
   resource_group_name = azurerm_resource_group.rg.name
   dns_prefix          = var.cluster_name
   node_resource_group = var.node_resource_group
+  enable_attach_acr   = true
+  acr_id	      = azurerm_container_registry.acr.id
 
   default_node_pool {
     name                = "system"
